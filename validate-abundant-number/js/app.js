@@ -1,5 +1,5 @@
 const clickFunction = () => {
-    var str = $("#ipText").val();
+    var str = document.getElementById('ipText').value;
     let num = parseInt(str);
     let sum = 0;
     for(let i=1; i<=num; i++){
@@ -9,9 +9,9 @@ const clickFunction = () => {
     }
 
     if(sum > 2*num)
-        $("#opText").text("Abundant Number");
+        document.getElementById('opText').innerHTML = "Abundant Number";
     else
-        $("#opText").text("Not an Abundant Number");
+        document.getElementById('opText').innerHTML = "Not an Abundant Number";
 }   
 
 function clearFields(){
